@@ -7,6 +7,13 @@
     <title>{{meta_title}}</title>
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
+    {{#if (eq @site.url "https://dapplooker.com/blog")}}
+      <meta name="robots" content="index, follow">
+    {{else}}
+      <meta name="robots" content="noindex, nofollow">
+    {{/if}}
+
+
     {{ghost_head}}
 </head>
 
